@@ -6,7 +6,7 @@ Hey there! I'm a passionate full-stack enthusiast with a strong focus on Next.js
 
 💡 What I Do
 
-🔹 Next.js & React Development - Scalable, SEO-friendly web applications.  
+🔹 Next.js & React Development - Scalable, Robust web applications.  
 🔹 Tailwind CSS & UI/UX - Modern, pixel-perfect, and responsive designs.  
 🔹 Generative AI (GenAI) & LLMs - Working on NagarGPT, a municipality-focused AI chatbot using RAG.  
 🔹 Backend Development - Node.js, Express, and API integrations.  
