@@ -9,7 +9,7 @@ export const GET= async (req, res) => {
         
         const database = client.db(dbName);
         const collection = database.collection(collectionName);
-        const projects = await collection.find({}).toArray(); // Convert cursor to array
+        const projects = await collection.find({}).sort({ id: -1 }).toArray(); // Convert cursor to array
 // console.log(JSON.stringify(projects))
         return new Response(JSON.stringify(projects),{status:200})
     } catch (error) {

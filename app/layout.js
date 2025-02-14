@@ -5,7 +5,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import Navbar from './components/navbar'
 import Footer from './components/footer';
-
+import { ToastProvider } from "@/app/components/ui/use_toast";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar/>
-        {children}
+        <ToastProvider>
+          {children}
+        </ToastProvider>
         <Footer/>
         </body>
     </html>

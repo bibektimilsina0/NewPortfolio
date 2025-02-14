@@ -1,54 +1,123 @@
-"use client"
-// ProjectCard.js
-// ProjectCard.js
+"use client";
 
-import React from 'react';
+import React, { useState } from "react";
+import Image from "next/image";
+import { Dialog } from "@headlessui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 function ProjectCard({ project }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     if (!project) {
-        // Handle the case where project is undefined
         return <div>No project data available.</div>;
-      }
-  const { projectTitle, 'project-description': projectDescription, projectLink, githubLink } = project;
+    }
 
-  return (
-    <div className="border p-4 m-4">
-      <h2 className="text-xl font-bold">{projectTitle}</h2>
-      <p className="text-gray-600">{projectDescription}</p>
+    const { projectTitle, projectDescription, projectLink, githubLink, preview, technologies } = project;
+    const formattedTechnologies = technologies ? technologies.split(",").map((tech) => tech.trim()) : [];
 
-      <div className="mt-4">
-        <a
-          href={projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+    return (
+        <div>
+        <motion.div
+            className="w-full sm:w-80 md:w-96 p-4 m-4 border rounded-lg shadow-md flex flex-col items-center cursor-pointer"
+            onClick={() => setIsOpen(true)}
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }}
+            transition={{ duration: 0.3 }}
         >
-          View Project
-        </a>
-        <span className="mx-2 text-gray-400">|</span>
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:underline"
-        >
-          GitHub Link
-        </a>
-      </div>
+            {/* Image with hover effect */}
+            <motion.div
+                className="relative cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+            >
+                <Image
+                    src={preview}
+                    width={360}
+                    height={200}
+                    className="rounded-lg object-cover"
+                    alt={projectTitle}
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity"></div>
+            </motion.div>
 
-      <div className="mt-4">
-        {/* Embed the link preview using an iframe */}
-        <iframe
-          src={projectLink}
-          title={`Preview of ${projectTitle}`}
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </div>
-    </div>
-  );
+            {/* Title */}
+            <h2 className="text-lg font-bold mt-2 text-center">{projectTitle}</h2>
+
+            {/* Description (truncated to 2 lines) */}
+            <p className="text-gray-400 line-clamp-2 overflow-hidden">{projectDescription}</p>
+
+            {/* Technologies */}
+            <div className="mt-2 flex flex-wrap justify-center gap-2">
+                {formattedTechnologies.map((tech, index) => (
+                    <motion.button
+                        key={index}
+                        className="bg-yellow-900 text-yellow-500 hover:bg-yellow-800 text-sm px-3 py-1 rounded-full transition-all"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.2, type: "spring", stiffness: 200 }}
+                    >
+                        {tech}
+                    </motion.button>
+                ))}
+            </div>
+            </motion.div>
+            {/* Modal */}
+            {isOpen && (
+                <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                    <motion.div
+                        className="bg-[#2d3846] p-6 rounded-lg max-w-5xl w-full flex gap-6 relative"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -50 }}
+                        transition={{ duration: 0.4, type: "spring", stiffness: 100 }}
+                    >
+                        {/* Close Button (Cross icon) */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="absolute top-4 right-4 text-white text-2xl"
+                        >
+                            <FontAwesomeIcon icon={faTimes} />
+                        </button>
+                        {console.log(isOpen)}
+                        <Image
+                            src={preview}
+                            width={660}
+                            height={500}
+                            className="rounded-lg object-cover"
+                            alt={projectTitle}
+                        />
+                        <div>
+                            <Dialog.Title className="text-2xl font-bold text-white">{projectTitle}</Dialog.Title>
+                            <p className="text-gray-400 mt-2">{projectDescription}</p>
+                            <div className="mt-4 flex gap-6">
+                                {/* Demo Link */}
+                                <a
+                                    href={projectLink}
+                                    target="_blank"
+                                    className="flex items-center bg-yellow-500 text-yellow-900 hover:bg-yellow-400 transition-all p-2 rounded-md"
+                                >
+                                    View Live Demo
+                                    <FontAwesomeIcon icon={faArrowRightToBracket} className="text-[#E94057] ml-2" />
+                                </a>
+
+                                {/* GitHub Link */}
+                                <a
+                                    href={githubLink}
+                                    target="_blank"
+                                    className="flex items-center bg-yellow-500 text-yellow-900 hover:bg-yellow-400 transition-all p-2 rounded-md"
+                                >
+                                    View Code
+                                    <FontAwesomeIcon icon={faGithub} className="text-[#E94057] ml-2" />
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
+                </Dialog>
+            )}
+       
+        </div>
+    );
 }
 
 export default ProjectCard;
