@@ -5,7 +5,7 @@ function Footer() {
         <footer className="h-auto mb-4 flex flex-col md:flex-row justify-between items-center py-4 px-6">
             <div className="flex md:flex-row items-center justify-center text-center">
                 <Image
-                    src="/logo.jpg"
+                    src="/bibektimilsina_logo.jpg"
                     width={60}
                     height={60}
                     alt='logo'

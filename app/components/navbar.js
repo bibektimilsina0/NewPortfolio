@@ -16,7 +16,7 @@ function Navbar() {
         {/* Logo and greeting section */}
         <div className="flex items-center space-x-2">
           <Image
-            src="/logo.jpg"
+            src="/bibektimilsina_logo.jpg"
             width={60}
             height={60}
             alt="logo"
