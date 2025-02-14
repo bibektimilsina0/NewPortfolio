@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🚀 Welcome to My GitHub!
 
-## Getting Started
+👋 About Me
 
-First, run the development server:
+Hey there! I'm a passionate full-stack enthusiast with a strong focus on Next.js, React, and Tailwind CSS. My work spans from custom web applications to mobile-responsive web applications. I specialize in crafting responsive UI/UX designs, seamless animations, and highly optimized applications. I also have a keen interest in Machine Learning and its applications.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+💡 What I Do
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔹 Next.js & React Development - Scalable, SEO-friendly web applications.  
+🔹 Tailwind CSS & UI/UX - Modern, pixel-perfect, and responsive designs.  
+🔹 Generative AI (GenAI) & LLMs - Working on NagarGPT, a municipality-focused AI chatbot using RAG.  
+🔹 Backend Development - Node.js, Express, and API integrations.  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🏆 Notable Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🚀 Tutor Home Nepal - A platform connecting parents and tutors with seamless reporting features.  
+🤖 NagarGPT - AI-powered chatbot designed for municipal-level assistance.  
+📄 Automated Report Cards - Dynamic generation and downloadable PDFs in A4 format.  
+🚀 SAFAR - Promote Tourism - A virtual tour web app with AR, 360° views, and real-time translation for exploring Nepal.  
+🎓 CareerLink - A platform connecting Paschimanchal Campus students with internship opportunities.  
 
-## Learn More
+📌 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+frontend:
+  - Next.js
+  - React
+  - Tailwind CSS
+backend:
+  - Node.js
+  - Express.js
+databases:
+  - Firestore
+  - MongoDB
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🌱 Currently Learning
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Exploring Nest.js for scalable backend development.
 
-## Deploy on Vercel
+Enhancing chatbot NLP for Nepali language models.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Exploring LLMs and Generative AI for advanced AI solutions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Advanced UI/UX strategies for mobile-first designs.
+
+📫 Get in Touch
+
+💼 [LinkedIn](https://www.linkedin.com/in/bibek-timilsina-6a5477253) | 📧 [Email: bibektimilsina7857@gmail.com](mailto:bibektimilsina7857@gmail.com)
+
+🚀 Always open to collaborations and exciting projects!
