@@ -31,7 +31,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
           <div className="timeline-date">July-2020</div>
           <div className="timeline-content">
@@ -54,7 +54,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
         <div className="timeline-date">April-2021</div>
           <div className="timeline-content">
@@ -67,7 +67,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
         <div className="timeline-date">November-2022</div>
           <div className="timeline-content">
@@ -90,7 +90,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
         <div className="timeline-date">January-2023</div>
           <div className="timeline-content">
@@ -103,7 +103,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
         <div className="timeline-date">June-2023</div>
           <div className="timeline-content">
@@ -126,7 +126,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
         <div className="timeline-date">January-2024</div>
           <div className="timeline-content">
@@ -139,7 +139,7 @@ function Journey() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 1.4 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
           >
         <div className="timeline-date">April-2024</div>
             <div className="timeline-content">
